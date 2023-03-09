@@ -1,4 +1,4 @@
-yum install git -y 
+#yum install git -y 
 Git 
 Git hub :
 create new Github account with email ID, 
