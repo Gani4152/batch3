@@ -1,0 +1,177 @@
+yum install git -y 
+Git 
+Git hub :
+create new Github account with email ID, 
+email ID
+password 
+
+Login into Github account --> New --> (create new repo) 
+Repository Name: ******
+Description : 
+public
+create repository 
+=================================
+Go to our laptop gitbash --> Documents --> create one directory name as yoour wish
+cd your-directory 
+git init 
+git remote add origin git@github.com:rajasekhar82/batch2.git
+git remote -v
+
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+copy key  and add in the github account --> Go to Right top account profile  
+click on settings --> ssh and GPG keys --> add New SSH key --> name and  paste the key
+ 
+
+==========================
+git config --global user.email "rajasekharn82@gmail.com"
+git config --global user.name "rajasekhar82"
+git config --global --list
+
+==============================
+vim f2
+git add .
+git commit -m "add f2 file"
+git push origin master 
+================================
+ 295  git pull origin master --allow-unrelated-histories
+  296  ls
+  297  vim index.html
+  298  git add .
+  299  git commit -m "updated index.html file"
+  300  git push origin master
+  301  git pull origin master
+  302  vim index.html
+  303  git add .
+  304  git commit -m "updated index.html with 10"
+  305  git push origin master
+  306  vim index.html
+  307  git pull origin master
+  308  vim index.html
+  309  history
+================================
+how to create branches 
+
+git brach   --> display trhe branch names 
+git branch branchname  --> create branch 
+git branch staging 
+git checkout -b branchname --> create branch along switch into that branch
+git checkout -b testing
+git checkout branchname  --> switch to branch
+
+Merging : 
+===========
+git checkout staging 
+create somes files and edit somefiles  then merge into master branch 
+git checkout master   --> switch to master 
+git merge staging      ---> it will apply staging branch changes into master 
+
+Clone :
+=======
+Clone will get the reomte repository directory into local laptop 
+
+go to any other directory 
+git clone https://github.com/rajasekhar82/online-2.git
+it will download online-2 reomte repository directory into our local laptop 
+
+
+
+==============
+Roll back the changes 
+git log --oneline  --> display commit history 
+by using git checkout we can roll back to previous commit 
+
+git checkout previous-commit-id 
+
+Git Rebase :
+=============
+This is also fast farwording merging, When we call the commit the branch to be added at the top of git
+structure
+do the chages in testing or any other 
+git checkout testing     --> add files and create some commits 
+git rebase master
+git checkout master 
+git merge master 
+git log --oneline  --> check all commits 
+
+here add all commits from testing branch to master branch 
+
+Git Cherry-pick :
+=================
+In This feature of git, Which allows to selectively pickup only specific branch and add 
+to the master branch   
+
+git checkout testing   --> add files and create  some commits 
+git checkout master 
+git cherry-pick commit-id(commitid from testing branch)
+git log --oneline 
+
+
+
+==================== 
+  161  cd Documents/
+  162  git remote -v
+  163  ls
+  164  ls -la
+  165  rm -rf .git/
+  166  cd batch1
+  167  ls
+  168  git init
+  169  git remote add origin
+  170  git remote add origin  git@github.com:Gani4152/batch1.git
+  171  git remote -v
+  172  git config --global --list
+  173  git add .
+  174  git commit -m "add files "
+  175  git push origin master
+  176  git push origin master
+  177  git push origin master
+  178  ssh-keygen
+  179  cat ~/.ssh/id_rsa.pub
+  180  git push origin master
+  181  git push origin master
+  182  git pull origin main
+  183  git push origin master
+  184  git branch staging
+  185  git checkout -b uat
+  186  ls
+  187  vim f2
+  188  git add .
+  189  git commit -m "edit f2"
+  190  git push origin uat
+  191  git checkout master
+  192  git merge uat
+  193  cat f2
+  194  git push origin master
+  195  cd ..
+  196  mkdir clonedir
+  197  cd clonedir/
+  198  ls
+  199  git clone https://github.com/Gani4152/batch1.git
+  200  ls
+  201  cd batch1/
+  202  ls
+  203  ls -la
+  204  git remote -v
+  205  cd ..
+  206  cd ..
+  207  cd batch1
+  208  ls
+  209  cat file1
+  210  git pull origin master
+  211  cat file1
+  212  git log --oneline
+  213  vim file1
+  214  git add .
+  215  git commit -m "edit file1"
+  216  git log --oneline
+  217  git checkout 15cac66
+  218  ls
+  219  cat file1
+  220  history
+  221  history
+
+
+
+
+
